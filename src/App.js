@@ -1,4 +1,6 @@
 import './App.css';
+import './components/css/meyer-reset.css';
+
 import './components/js/sign-up';
 
 import { Component } from 'react';
