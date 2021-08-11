@@ -10,6 +10,7 @@ export default class SignUp extends Component {
         password: '',
         passwordVerification: '',
         passwordsMatch: true,
+        emailIsMassive: true,
         redirect: false
     }
 
@@ -20,6 +21,10 @@ export default class SignUp extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
+        if (this.state.email !== '921massive@gmail.com'){
+            this.setState({ emailIsMassive: false })
+        }
+
         console.log(this.state)
     }
 
@@ -27,6 +32,13 @@ export default class SignUp extends Component {
         return (
             <div id="signup">
                 <h1>MMC BOOKS SIGN UP</h1>
+                {
+                    this.state.emailIsMassive
+                    ?
+                    null
+                    :
+                    <p>GTFO POSER</p>
+                }
                 <form id="signup-form" onSubmit={this.handleSubmit}>
                     <label>Username:</label>
                     <input onChange={this.handleChange} value={this.state.username} type="text" name="username" placeholder="Username"/>
@@ -35,10 +47,10 @@ export default class SignUp extends Component {
                     <input onChange={this.handleChange} value={this.state.email} type="text" name="email" placeholder="Email"/>
 
                     <label>Password:</label>
-                    <input onChange={this.handleChange} value={this.state.password} type="text" name="password" placeholder="Password"/>
+                    <input onChange={this.handleChange} value={this.state.password} type="password" name="password" placeholder="Password"/>
 
                     <label>Verify Password:</label>
-                    <input onChange={this.handleChange} value={this.state.passwordVerification} type="text" name="passwordVerification" placeholder="Verify Password"/>
+                    <input onChange={this.handleChange} value={this.state.passwordVerification} type="password" name="passwordVerification" placeholder="Verify Password"/>
                     
                     <input type="submit" value="Sign Up" id="sign-up-button" /> 
                 </form>
