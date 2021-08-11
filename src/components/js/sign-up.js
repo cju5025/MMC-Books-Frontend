@@ -1,3 +1,5 @@
+import '../css/sign-up.css';
+
 import { Component } from 'react';
 
 export default class SignUp extends Component {
@@ -5,18 +7,18 @@ export default class SignUp extends Component {
     render () {
         return (
             <div id="signup">
-                <h1>WELCOME TO MMC BOOKS</h1>
+                <h1>MMC BOOKS SIGN UP</h1>
                 <form id="signup-form">
-                    <label>Username</label>
+                    <label>Username:</label>
                     <input type="text" name="username" placeholder="Username"/>
 
-                    <label>Email</label>
+                    <label>Email:</label>
                     <input type="text" name="email" placeholder="Email"/>
 
-                    <label>Password</label>
+                    <label>Password:</label>
                     <input type="text" name="password" placeholder="Password"/>
 
-                    <label>Verify Password</label>
+                    <label>Verify Password:</label>
                     <input type="text" name="verify-password" placeholder="Verify Password"/>
                 </form>
             </div>
