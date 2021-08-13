@@ -5,7 +5,7 @@ export default class SignIn extends Component {
     render () {
         return (
             <div id="sign-in">
-                <h1>Hay</h1>
+                <h1>Sign In</h1>
             </div>
         )
     }
