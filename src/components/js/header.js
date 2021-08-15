@@ -20,6 +20,7 @@ export default class Home extends Component {
             ?
             <>
             <Link id='signout-link' to='/home' onClick={this.signOut}>Sign Out</Link>
+            <Link id='home-link' to='/home'>Home</Link>
             </>
             :
             <>
