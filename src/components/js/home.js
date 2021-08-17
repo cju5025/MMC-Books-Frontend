@@ -13,10 +13,7 @@ export default class Home extends Component {
           {
             localStorage.getItem('token')
             ?
-            <>
-            <h1> Welcome In Mothafucka! </h1>
             <Dashboard />
-            </>
             :
             <>
             </>

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#dashboard > h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5vw;
+}
+
+#button-container button {
+    border-radius: 30px;
+    height: 5vh;
+    width: 15vw;
+    background-color: white;
+    color: black;
+    font-size: 2vh;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+#button-container button:hover {
+    border-radius: 30px;
+    height: 5vh;
+    width: 15vw;
+    background-color: black;
+    color: white;
+    font-size: 2vh;
+}
