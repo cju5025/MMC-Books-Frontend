@@ -16,7 +16,7 @@ import Misc from './components/js/misc';
 export default class App extends Component {
   render () {
     return (
-      <div id="App">
+      <div id="app">
         <main id="main">
         <Route path="/sign-up" render={(routerProps) => <SignUp {...routerProps} />} />
         <Route path="/sign-in" render={(routerProps) => <SignIn {...routerProps} />} />
