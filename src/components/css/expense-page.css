@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+.expense {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.expense h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 35vw;
+    font-size: 5vh;
+}
+
+#expense-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    margin-left: 35vw;
+}

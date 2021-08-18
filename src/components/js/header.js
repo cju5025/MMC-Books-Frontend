@@ -21,13 +21,13 @@ export default class Home extends Component {
             localStorage.getItem('token')
             ?
             <>
-            <Link class='link' to='/home' onClick={this.signOut}>Sign Out</Link>
-            <Link class='link' to='/home'>Home</Link>
+            <Link className='link' to='/home' onClick={this.signOut}>Sign Out</Link>
+            <Link className='link' to='/home'>Home</Link>
             </>
             :
             <>
-            <Link class='link' to="/sign-in">Sign In</Link>
-            <Link class='link' to="/sign-up">Sign Up</Link>
+            <Link className='link' to="/sign-in">Sign In</Link>
+            <Link className='link' to="/sign-up">Sign Up</Link>
             </>
         }
         <Route path="/sign-up" render={(routerProps) => <SignUp {...routerProps} />} />
