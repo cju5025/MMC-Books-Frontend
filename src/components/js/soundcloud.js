@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import Header from './header';
 import '../css/expense-page.css';
@@ -11,7 +12,8 @@ export default class Soundcloud extends Component {
         inOrOut: '',
         date: "",
         description: "",
-        selectInOrOut: false
+        selectInOrOut: false,
+        submitted: false
     }
 
     handleChange = (event) => {
@@ -22,6 +24,7 @@ export default class Soundcloud extends Component {
         event.preventDefault();
 
         if(this.state.inOrOut === 'in'){
+            this.setState({ selectInOrOut: false })
             fetch('http://localhost:4000/expenses', {
                 method: 'POST',
                 headers: {
@@ -35,7 +38,9 @@ export default class Soundcloud extends Component {
                     description: this.state.description
                 }})
             })
+            .then(this.setState({ submitted: true }))
         } else if (this.state.inOrOut === 'out') {
+            this.setState({ selectInOrOut: false })
                 fetch('http://localhost:4000/expenses', {
                     method: 'POST',
                     headers: {
@@ -49,9 +54,14 @@ export default class Soundcloud extends Component {
                         description: this.state.description
                     }})
                 })
+                .then(this.setState({ submitted: true }))
             } else {
             this.setState({ selectInOrOut: true })
                 }
+    }
+
+    refreshWindow = () => {
+        window.location.replace('http://localhost:3000/soundcloud')
     }
     
     render () {
@@ -87,6 +97,17 @@ export default class Soundcloud extends Component {
                         null
                     }
                 </form>
+                {
+                    this.state.submitted 
+                    ?
+                    <div id="successful-submit-section">
+                        <p>Submitted! Need to do another Soundcloud expense?</p>
+                        <button onClick={this.refreshWindow}>Yes</button>
+                        <Link to='/home' ><button>No</button></Link>
+                    </div>
+                    :
+                    null
+                }
             </main>
             </>
         )
