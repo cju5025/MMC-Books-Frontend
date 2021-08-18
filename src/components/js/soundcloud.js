@@ -9,7 +9,7 @@ export default class Soundcloud extends Component {
     state = {
         type: "Soundcloud",
         amount: 0,
-        inOrOut: '',
+        inOrOut: "",
         date: "",
         description: "",
         selectInOrOut: false,
@@ -23,13 +23,13 @@ export default class Soundcloud extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
-        if(this.state.inOrOut === 'in'){
+        if (this.state.inOrOut === "in") {
             this.setState({ selectInOrOut: false })
-            fetch('http://localhost:4000/expenses', {
-                method: 'POST',
+            fetch("http://localhost:4000/expenses", {
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
                 },
                 body: JSON.stringify({ expense: {
                     type: this.state.type,
@@ -39,13 +39,13 @@ export default class Soundcloud extends Component {
                 }})
             })
             .then(this.setState({ submitted: true }))
-        } else if (this.state.inOrOut === 'out') {
+        } else if (this.state.inOrOut === "out") {
             this.setState({ selectInOrOut: false })
-                fetch('http://localhost:4000/expenses', {
-                    method: 'POST',
+                fetch("http://localhost:4000/expenses", {
+                    method: "POST",
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
                     },
                     body: JSON.stringify({ expense: {
                         type: this.state.type,
@@ -61,7 +61,7 @@ export default class Soundcloud extends Component {
     }
 
     refreshWindow = () => {
-        window.location.replace('http://localhost:3000/soundcloud')
+        window.location.replace("http://localhost:3000/soundcloud")
     }
     
     render () {
@@ -101,9 +101,9 @@ export default class Soundcloud extends Component {
                     this.state.submitted 
                     ?
                     <div id="successful-submit-section">
-                        <p>Submitted! Need to do another Soundcloud expense?</p>
+                        <p>Submitted! Need to do another {this.state.type} expense?</p>
                         <button onClick={this.refreshWindow}>Yes</button>
-                        <Link to='/home' ><button>No</button></Link>
+                        <Link to="/home" ><button>No</button></Link>
                     </div>
                     :
                     null
