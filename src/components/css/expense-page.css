@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 .expense {
+    width: 100vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -20,4 +21,25 @@
     flex-direction: column;
     margin-top: 10vh;
     margin-left: 35vw;
+}
+
+#amount-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#amount-inputs {
+    display: flex;
+    flex-direction: row;
+}
+
+#amount-inputs input {
+    margin-right: 2vw;
+}
+
+#amount-inputs select {
+    height: 2.75vh;
+    width: 7.5vw;
+    min-width: 90px;
 }
