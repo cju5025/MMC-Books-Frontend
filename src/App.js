@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import './App.css';
 import './components/css/meyer-reset.css';

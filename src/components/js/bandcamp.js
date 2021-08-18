@@ -1,14 +1,17 @@
 import { Component } from 'react';
 
 import Header from './header';
+import '../css/expense-page.css';
 
 export default class Bandcamp extends Component {
     render () {
         return (
-            <main id="bandcamp-main">
-                <Header />
+            <>
+            <Header />
+            <main className="expense">
                 <h1>Bandcamp In/Out</h1>
             </main>
+            </>
         )
     }
 }
