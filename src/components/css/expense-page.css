@@ -43,3 +43,39 @@
     width: 7.5vw;
     min-width: 90px;
 }
+
+#submit {
+    border-radius: 30px;
+    height: 5vh;
+    width: 25vw;
+    color: black;
+    background-color: white;
+}
+
+#submit:hover {
+    border-radius: 30px;
+    height: 5vh;
+    width: 25vw;
+    color: white;
+    background-color: black;
+}
+
+#successful-submit-section {
+    margin-left: 35vw;
+}
+
+#successful-submit-section button {
+    margin: 2.5vh;
+    width: 10vw;
+    border-radius: 30px;
+    color: black;
+    background-color: white;
+}
+
+#successful-submit-section button:hover {
+    margin: 2.5vh;
+    width: 10vw;
+    border-radius: 30px;
+    color: white;
+    background-color: black;
+}
