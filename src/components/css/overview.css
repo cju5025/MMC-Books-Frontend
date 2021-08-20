@@ -8,3 +8,9 @@
     display: flex;
     justify-content: center;
 }
+
+#expense-section {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-around;
+}
