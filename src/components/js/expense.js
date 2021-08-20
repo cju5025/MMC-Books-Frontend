@@ -1,9 +1,11 @@
-import { Component } from 'react';
+import '../css/expense.css';
 
-export default class Expense extends Component {
-    render () {
+export default function Expense (props) {
         return (
-            <h1>Hi</h1>
+            <div id="expense-card">
+                <h1>{props.description}</h1>
+                <h2>{props.amount}</h2>
+                <h3>{props.date}</h3>
+            </div>
         )
-    }
 }
