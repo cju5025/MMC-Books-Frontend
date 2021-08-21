@@ -21,8 +21,14 @@ export default class Overview extends Component {
 
     showExpenses = () => {
         return this.state.expenses.map(expense => {
-            console.log(expense)
-            return <Expense amount={expense.amount} date={expense.date} description={expense.description} />
+            return <Expense 
+            key={expense.id}
+            id={expense.id}
+            amount={expense.amount} 
+            type={expense.type} 
+            date={expense.date} 
+            description={expense.description} 
+            />
         })
     }
     

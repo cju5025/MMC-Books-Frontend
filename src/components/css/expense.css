@@ -1,8 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
 #expense-card {
+    font-family: 'Roboto-Condensed', 'sans-serif';
     display: flex;
     flex-direction: column;
+    border: solid 1px grey;
+    box-shadow: 1px 2px 2px grey;
+    border-top: none;
+    border-left: none;
+    padding: 5px;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    width: 20vw;
 }
 
-h1 {
-    font-size: 5vh;
+p {
+    margin: .5vh;
+}
+
+#modal {
+    border: solid 1px grey;
+    box-shadow: 1px 2px 2px grey;
+    border-top: none;
+    border-left: none;
+    padding: 5px;
+}
+
+#modal button {
+    margin-right: .5vw;
+    border-radius: 30px;
+    width: 7.5vw;
+    color: black;
+    background-color: white;
+}
+
+#modal button:hover {
+    margin-right: .5vw;
+    border-radius: 30px;
+    width: 7.5vw;
+    color: white;
+    background-color: black;
 }

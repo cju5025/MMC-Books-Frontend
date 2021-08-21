@@ -1,11 +1,42 @@
+import { Component } from 'react';
+
 import '../css/expense.css';
 
-export default function Expense (props) {
+export default class Expense extends Component {
+    
+    state = {
+        deleteButtonClicked: false,
+        areYouSure: false
+    }
+
+    deleteButtonClicked = () => {
+        this.setState({ deleteButtonClicked: !this.state.deleteButtonClicked })
+    }
+
+    deleteExpense = () => {
+        const id = this.props.id
+        fetch(`http://localhost:4000/expenses/${id}`, { method: "DELETE" })
+    }
+    render () {
         return (
             <div id="expense-card">
-                <h1>{props.description}</h1>
-                <h2>{props.amount}</h2>
-                <h3>{props.date}</h3>
+                <button id="delete-button" onClick={this.deleteButtonClicked}>X</button>
+                {
+                    this.state.deleteButtonClicked
+                    ?
+                    <div id="modal">
+                        <p>Are You Sure?</p>
+                        <button onClick={this.deleteExpense}>Yes</button>
+                        <button onClick={this.deleteButtonClicked}>No</button>
+                    </div>
+                    :
+                    null
+                }
+                <p>{this.props.type}</p>
+                <p>{this.props.description}</p>
+                <p>${this.props.amount}</p>
+                <p>{this.props.date}</p>
             </div>
         )
+    }
 }
