@@ -7,7 +7,8 @@ import '../css/overview.css';
 export default class Overview extends Component {
     
     state = {
-        expenses: []
+        expenses: [],
+        deletedExpense: false
     }
 
     componentDidMount = () => {
@@ -27,7 +28,8 @@ export default class Overview extends Component {
             amount={expense.amount} 
             type={expense.type} 
             date={expense.date} 
-            description={expense.description} 
+            description={expense.description}
+            deletedExpense={this.state.deletedExpense} 
             />
         })
     }

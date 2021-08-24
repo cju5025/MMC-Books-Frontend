@@ -18,12 +18,17 @@ export default class Expense extends Component {
         fetch(`http://localhost:4000/expenses/${id}`, { method: "DELETE" })
     }
 
+    updateExpense = () => {
+        console.log("lets update it")
+    }
+
     render () {
         return (
             <div id="expense-card">
                 <section id="top-section">
                     <p>{this.props.type}</p>
                     <button id="delete-button" onClick={this.deleteButtonClicked}>X</button>
+                    <button id="update-button" onClick={this.updateExpense}>Update</button>
                     {
                         this.state.deleteButtonClicked
                         ?
