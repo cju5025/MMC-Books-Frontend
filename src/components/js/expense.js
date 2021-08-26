@@ -25,10 +25,6 @@ export default class Expense extends Component {
     render () {
         return (
             <div id="expense-card">
-                <section id="top-section">
-                    <p>{this.props.type}</p>
-                    <button id="delete-button" onClick={this.deleteButtonClicked}>X</button>
-                    <button id="update-button" onClick={this.updateExpense}>Update</button>
                     {
                         this.state.deleteButtonClicked
                         ?
@@ -40,6 +36,10 @@ export default class Expense extends Component {
                         :
                         null
                     }
+                <section id="top-section">
+                    <p>{this.props.type}</p>
+                    <button id="delete-button" onClick={this.deleteButtonClicked}>X</button>
+                    <button id="update-button" onClick={this.updateExpense}>Update</button>
                 </section>
                 <p>{this.props.description}</p>
                 <p>${this.props.amount}</p>
