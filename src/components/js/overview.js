@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import Header from './header';
 import Expense from './expense';
+import SearchBar from './searchbar';
 import '../css/overview.css';
 
 export default class Overview extends Component {
@@ -39,6 +40,7 @@ export default class Overview extends Component {
             <main id="overview">
                 <Header />
                 <h1>Overview</h1>
+                <SearchBar />
                 <section id="expense-section">
                     {this.showExpenses()}
                 </section>
