@@ -9,7 +9,8 @@ export default class Overview extends Component {
     
     state = {
         expenses: [],
-        deletedExpense: false
+        deletedExpense: false,
+        searchInput: ""
     }
 
     componentDidMount = () => {
@@ -19,6 +20,10 @@ export default class Overview extends Component {
             .then(expenses => expenses.forEach(expense => {
                 this.setState({ expenses: [...this.state.expenses, expense]})
             }))
+    }
+
+    setSearchInput = (searchInput) => {
+        this.setState({ searchInput: searchInput })
     }
 
     showExpenses = () => {
@@ -40,7 +45,7 @@ export default class Overview extends Component {
             <main id="overview">
                 <Header />
                 <h1>Overview</h1>
-                <SearchBar />
+                <SearchBar setSearchInput={this.setSearchInput}/>
                 <section id="expense-section">
                     {this.showExpenses()}
                 </section>
