@@ -20,10 +20,15 @@ export default class Overview extends Component {
             .then(expenses => expenses.forEach(expense => {
                 this.setState({ expenses: [...this.state.expenses, expense]})
             }))
+            .then(this.filterExpenses())
     }
 
     setSearchInput = (searchInput) => {
         this.setState({ searchInput: searchInput })
+    }
+
+    filterExpenses = () => {
+        console.log("filter expenses")
     }
 
     showExpenses = () => {
