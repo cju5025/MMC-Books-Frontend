@@ -6,6 +6,7 @@ export default class SearchBar extends Component {
 handleSubmit = (event) => {
     event.preventDefault()
     this.props.setSearchInput(event.target[0].value)
+    this.props.filterExpenses()
 }
 
     render () {
