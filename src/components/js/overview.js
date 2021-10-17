@@ -28,7 +28,26 @@ export default class Overview extends Component {
     }
 
     filterExpenses = () => {
-        console.log("filter expenses")
+        if (this.state.searchInput !== ""){
+            this.setState(({ 
+                expenses: this.state.expenses.filter(expense => {
+                let description = this.lowerCaser(expense.description)
+                let searchQuery = this.lowerCaser(this.state.searchInput)
+                return description.split(" ").includes(searchQuery)
+                })
+            }))
+        }
+    }
+
+    lowerCaser = (string) => {
+        let stringArray = string.split("")
+        
+        stringArray = stringArray.map(char => {
+            return char = char.toLowerCase()
+        })
+
+        string = stringArray.join("")
+        return string
     }
 
     showExpenses = () => {
@@ -50,7 +69,7 @@ export default class Overview extends Component {
             <main id="overview">
                 <Header />
                 <h1>Overview</h1>
-                <SearchBar setSearchInput={this.setSearchInput}/>
+                <SearchBar setSearchInput={this.setSearchInput} filterExpenses={this.filterExpenses}/>
                 <section id="expense-section">
                     {this.showExpenses()}
                 </section>
