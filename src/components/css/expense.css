@@ -3,8 +3,6 @@
 
 #expense-card {
     font-family: 'Roboto-Condensed', 'sans-serif';
-    display: flex;
-    flex-direction: column;
     border: solid 1px grey;
     box-shadow: 1px 2px 2px grey;
     border-top: none;
@@ -15,24 +13,43 @@
     width: 20vw;
 }
 
+#card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 p {
     margin: .5vh;
 }
 
-#top-section {
+#left-section {
     display: flex;
     flex-direction: row;
     width: 100vw;
 }
 
-#top-section button {
+#left-section button {
     border-radius: 5px;
     color: white;
     border-width: 0px;
-    /* background-image: linear-gradient(to right, #0fa857, #1eb265); */
-    background-image: linear-gradient(to right, #0fa857 0%, #1eb265 51%, #a4e2c1 100%)
+    background-image: linear-gradient(to right, #0fa857 0%, #219b5c 51%, #16613a 100%)
 }
 
+#center-section {
+
+}
+
+#right-section {
+
+}
+
+#right-section button {
+    border-radius: 5px;
+    color: white;
+    border-width: 0px;
+    background-image: linear-gradient(to right, #0fa857 0%, #219b5c 51%, #16613a 100%)
+}
 
 #modal {
     border: solid 1px grey;

@@ -36,14 +36,20 @@ export default class Expense extends Component {
                         :
                         null
                     }
-                <section id="top-section">
-                    <p>{this.props.type}</p>
-                    <button id="delete-button" onClick={this.deleteButtonClicked}>X</button>
-                    <button id="update-button" onClick={this.updateExpense}>Update</button>
-                </section>
-                <p>{this.props.description}</p>
-                <p>${this.props.amount}</p>
-                <p>{this.props.date}</p>
+                <div id="card-content">
+                    <section id="left-section">
+                        <button id="delete-button" onClick={this.deleteButtonClicked}>X</button>
+                    </section>
+                    <section id="center-section">
+                        <p>{this.props.type}</p>
+                        <p>{this.props.description}</p>
+                        <p>${this.props.amount}</p>
+                        <p>{this.props.date}</p>
+                    </section>
+                    <section id="right-section">
+                        <button id="update-button" onClick={this.updateExpense}>Update</button>
+                    </section>
+                </div>
             </div>
         )
     }
