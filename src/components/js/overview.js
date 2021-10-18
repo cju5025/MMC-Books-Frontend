@@ -36,8 +36,9 @@ export default class Overview extends Component {
                 return description.split(" ").includes(searchQuery)
                 })
             }))
-        }
+        } 
     }
+    // abstract lowerCaser into new helperFunction file
 
     lowerCaser = (string) => {
         let stringArray = string.split("")
