@@ -9,6 +9,7 @@
     box-shadow: 1px 2px 2px grey;
     border-top: none;
     border-left: none;
+    border-radius: 30px;
     padding: 5px;
     margin-top: 5vh;
     width: 20vw;
@@ -27,7 +28,10 @@ p {
 #top-section button {
     border-radius: 5px;
     color: white;
-    background-color: black;}
+    border-width: 0px;
+    /* background-image: linear-gradient(to right, #0fa857, #1eb265); */
+    background-image: linear-gradient(to right, #0fa857 0%, #1eb265 51%, #a4e2c1 100%)
+}
 
 
 #modal {
