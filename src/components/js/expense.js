@@ -39,6 +39,7 @@ export default class Expense extends Component {
                 <div id="card-content">
                     <section id="left-section">
                         <button id="delete-button" onClick={this.deleteButtonClicked}>X</button>
+                        <button id="update-button" onClick={this.updateExpense}>Update</button>
                     </section>
                     <section id="center-section">
                         <p>{this.props.type}</p>
@@ -47,7 +48,7 @@ export default class Expense extends Component {
                         <p>{this.props.date}</p>
                     </section>
                     <section id="right-section">
-                        <button id="update-button" onClick={this.updateExpense}>Update</button>
+                        
                     </section>
                 </div>
             </div>
