@@ -33,7 +33,10 @@ p {
     border-radius: 5px;
     color: white;
     border-width: 0px;
-    background-image: linear-gradient(to right, #0fa857 0%, #219b5c 51%, #16613a 100%)
+    height: 50%;
+    width: 30%;
+    margin-top: 10%;
+    background-image: linear-gradient(to right, #c60f11 0%, #ee0507 51%, #ee0507 100%)
 }
 
 #center-section {
