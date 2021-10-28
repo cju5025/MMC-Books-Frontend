@@ -6,11 +6,16 @@ export default class Expense extends Component {
     
     state = {
         deleteButtonClicked: false,
-        areYouSure: false
+        areYouSure: false,
+        dropdownClicked: false
     }
 
     deleteButtonClicked = () => {
         this.setState({ deleteButtonClicked: !this.state.deleteButtonClicked })
+    }
+
+    dropdownClicked = () => {
+        this.setState({ dropdownClicked: !this.state.dropdownClicked})
     }
 
     deleteExpense = () => {
@@ -38,8 +43,16 @@ export default class Expense extends Component {
                     }
                 <div id="card-content">
                     <section id="left-section">
-                        <button id="delete-button" onClick={this.deleteButtonClicked}>X</button>
-                        <button id="update-button" onClick={this.updateExpense}>Update</button>
+                        {
+                            this.state.dropdownClicked
+                            ?
+                            <div>
+                                <button id="delete-button" onClick={this.deleteButtonClicked}>X</button>
+                                <button id="update-button" onClick={this.updateExpense}>Update</button>
+                            </div>
+                            :
+                            <button id="dropdown" onClick={this.dropdownClicked}>v</button>
+                        }
                     </section>
                     <section id="center-section">
                         <p>{this.props.type}</p>
