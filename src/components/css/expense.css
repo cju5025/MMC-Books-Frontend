@@ -28,6 +28,14 @@ p {
     align-content: left;
 }
 
+#dropdown-button {
+    height: 2.5vh;
+    width: 5vw;
+    background-color: white;
+    border-radius: 30px;
+    border-width: 2px;
+}
+
 #delete-button {
     border-radius: 5px;
     color: white;
