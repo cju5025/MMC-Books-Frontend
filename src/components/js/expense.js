@@ -51,7 +51,7 @@ export default class Expense extends Component {
                                 <button id="update-button" onClick={this.updateExpense}>Update</button>
                             </div>
                             :
-                            <button id="dropdown" onClick={this.dropdownClicked}>v</button>
+                            <button id="dropdown-button" onClick={this.dropdownClicked}>⬐</button>
                         }
                     </section>
                     <section id="center-section">
